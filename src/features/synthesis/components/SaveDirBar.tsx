@@ -45,7 +45,7 @@ export function SaveDirBar() {
       ) : (
         <div className={styles.row}>
           <div className={styles.tip}>未设置保存目录</div>
-          <Button size="sm" variant="secondary" onClick={select}>
+          <Button size="sm" variant="primary" onClick={select}>
             <FolderOpen size={13} /> 选择目录
           </Button>
         </div>
