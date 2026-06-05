@@ -1,5 +1,5 @@
 import { useRef, useState, useCallback } from 'react';
-import { Upload, X, FileText, PenLine } from 'lucide-react';
+import { Upload, X, FileText, PenLine, Type, TextQuote, ScrollText } from 'lucide-react';
 import clsx from 'clsx';
 import { GroupCard } from '@/components/GroupCard/GroupCard';
 import { Button } from '@/components/Button/Button';
@@ -9,10 +9,10 @@ import { useToastStore } from '@/store/useToastStore';
 import type { TextMode } from '@/types/entry';
 import styles from './InputArea.module.css';
 
-const MODES: { id: TextMode; label: string; hint: string }[] = [
-  { id: 'word', label: '单词', hint: '每行一个，自动去重' },
-  { id: 'sentence', label: '句子', hint: '每行一句' },
-  { id: 'passage', label: '短文', hint: '空行分段' },
+const MODES: { id: TextMode; label: string; hint: string; icon: React.ReactNode }[] = [
+  { id: 'word', label: '单词', hint: '每行一个，自动去重', icon: <Type size={13} /> },
+  { id: 'sentence', label: '句子', hint: '每行一句', icon: <TextQuote size={13} /> },
+  { id: 'passage', label: '短文', hint: '空行分段', icon: <ScrollText size={13} /> },
 ];
 
 export function InputArea() {
@@ -89,7 +89,7 @@ export function InputArea() {
             disabled={isGenerating}
             title={m.hint}
           >
-            {m.label}
+            {m.icon} {m.label}
           </button>
         ))}
         <span className={styles.hint}>{MODES.find((m) => m.id === textMode)?.hint}</span>
