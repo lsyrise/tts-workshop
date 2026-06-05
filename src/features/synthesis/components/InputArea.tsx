@@ -26,8 +26,9 @@ export function InputArea() {
   const [isDragging, setIsDragging] = useState(false);
 
   const handleImport = useCallback(() => {
-    const lines = text.split('\n').map((l) => l.trim()).filter(Boolean);
-    if (lines.length === 0) {
+    const lines =
+      textMode === 'passage' ? text.split('\n') : text.split('\n').map((l) => l.trim()).filter(Boolean);
+    if (lines.length === 0 || (textMode === 'passage' && !lines.some((l) => l.trim()))) {
       push('请先输入或粘贴文本', 'warning');
       return;
     }
@@ -44,13 +45,14 @@ export function InputArea() {
       try {
         const content = await file.text();
         setText(content);
-        const lines = content.split('\n').map((l) => l.trim()).filter(Boolean);
-        if (lines.length > 0) importLines(lines);
+        const lines =
+          textMode === 'passage' ? content.split('\n') : content.split('\n').map((l) => l.trim()).filter(Boolean);
+        if (lines.length > 0 && !(textMode === 'passage' && !lines.some((l) => l.trim()))) importLines(lines);
       } catch (e) {
         push(`读取文件失败: ${(e as Error).message}`, 'error');
       }
     },
-    [setText, importLines, push],
+    [setText, importLines, push, textMode],
   );
 
   const onDrop = useCallback(

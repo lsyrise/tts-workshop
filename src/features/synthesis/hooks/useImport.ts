@@ -17,6 +17,12 @@ function firstWord(text: string): string {
   return text.replace(FIRST_WORD_STRIP, '').split(FIRST_WORD_SPLIT)[0] ?? '';
 }
 
+/** 取前 N 个单词，用于短文/句子模式文件名 */
+function headWords(text: string, n = 2): string {
+  const cleaned = text.replace(FIRST_WORD_STRIP, '');
+  return cleaned.split(FIRST_WORD_SPLIT).slice(0, n).join('_') || 'text';
+}
+
 function splitTexts(lines: string[], mode: TextMode): string[] {
   if (mode === 'passage') {
     return lines
@@ -48,9 +54,9 @@ function buildFilenames(
     if (mode === 'word') {
       base = sanitizeFilename(text);
     } else {
-      const first = sanitizeFilename(firstWord(text)) || 'text';
       const prefix = mode === 'passage' ? 'p' : 's';
-      base = `${prefix}_${first}_${ts}`;
+      const words = mode === 'passage' ? headWords(text, 2) : sanitizeFilename(firstWord(text)) || 'text';
+      base = `${prefix}_${words}_${ts}`;
     }
       return slots.map((s) => {
         const ext = hasMultiple ? `-${sanitizeFilename(s.short)}` : '';
