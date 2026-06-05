@@ -8,9 +8,9 @@
 .body {
   flex: 1;
   display: grid;
-  grid-template-columns: minmax(320px, 360px) 1fr;
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: 300px 1fr;
+  gap: 16px;
+  padding: 16px;
   overflow: hidden;
   min-height: 0;
 }
@@ -18,7 +18,7 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
   overflow-y: auto;
   padding-right: 4px;
   min-height: 0;
@@ -27,7 +27,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
   overflow: hidden;
   min-height: 0;
 }

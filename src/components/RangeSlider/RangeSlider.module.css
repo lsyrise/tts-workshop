@@ -9,34 +9,34 @@
   justify-content: space-between;
 }
 .label {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   color: var(--text-secondary);
 }
 .val {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
   font-family: var(--font-mono);
 }
 .row {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 .bound {
-  font-size: 11px;
+  font-size: 10px;
   color: var(--text-muted);
   font-family: var(--font-mono);
   flex-shrink: 0;
-  min-width: 28px;
+  min-width: 24px;
   text-align: center;
 }
 .input {
   flex: 1;
   -webkit-appearance: none;
   appearance: none;
-  height: 3px;
+  height: 4px;
   background: var(--border);
   border-radius: 2px;
   outline: none;
@@ -45,19 +45,21 @@
 .input::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background: var(--accent);
   cursor: pointer;
-  transition: transform var(--t);
+  transition: transform var(--t-fast), box-shadow var(--t-fast);
+  box-shadow: 0 1px 3px rgba(79, 70, 229, 0.3);
 }
 .input::-webkit-slider-thumb:hover {
-  transform: scale(1.2);
+  transform: scale(1.15);
+  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.4);
 }
 .input::-moz-range-thumb {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background: var(--accent);
   border: none;

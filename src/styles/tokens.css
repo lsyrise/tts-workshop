@@ -1,39 +1,50 @@
 :root {
   /* ============ 基础色板 ============ */
-  --bg: #fafafa;
+  --bg: #f8f9fb;
   --surface: #ffffff;
-  --surface-hover: #fafafa;
-  --surface-active: #f4f4f5;
+  --surface-hover: #f9fafb;
+  --surface-active: #f3f4f6;
   --border: #e5e7eb;
   --border-light: #f3f4f6;
   --border-strong: #d1d5db;
 
-  --text: #18181b;
-  --text-secondary: #52525b;
-  --text-muted: #a1a1aa;
+  --text: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #9ca3af;
 
-  /* ============ 强调色 ============ */
-  --accent: #18181b;
-  --accent-hover: #27272a;
+  /* ============ 主色 — 靛蓝 Indigo ============ */
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --accent-soft: #eef2ff;
   --accent-fg: #ffffff;
-  --brand: #3b82f6;
-  --brand-hover: #2563eb;
-  --brand-soft: #eff6ff;
 
+  --brand: #4f46e5;
+  --brand-hover: #4338ca;
+  --brand-soft: #eef2ff;
+  --brand-fg: #ffffff;
+
+  /* ============ 状态色 ============ */
   --success: #10b981;
+  --success-hover: #059669;
   --success-soft: #ecfdf5;
   --success-bg: #f0fdf4;
+
   --danger: #ef4444;
+  --danger-hover: #dc2626;
   --danger-soft: #fef2f2;
   --danger-bg: #fef2f2;
+
   --warning: #f59e0b;
+  --warning-hover: #d97706;
   --warning-soft: #fffbeb;
   --warning-bg: #fffbeb;
+
   --info: #3b82f6;
   --info-soft: #eff6ff;
   --info-bg: #eff6ff;
 
-  /* ============ 圆角（参考图：圆角较大、柔和） ============ */
+  /* ============ 圆角 ============ */
+  --r-xs: 6px;
   --r-sm: 8px;
   --r-md: 12px;
   --r-lg: 16px;
@@ -42,40 +53,50 @@
   --r-full: 9999px;
 
   /* ============ 过渡 ============ */
-  --t-fast: 0.1s ease;
-  --t: 0.15s ease;
-  --t-slow: 0.25s ease;
+  --t-fast: 0.12s ease;
+  --t: 0.18s ease;
+  --t-slow: 0.3s ease;
+  --t-spring: 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 
-  /* ============ 阴影（参考图：柔和、轻量投影） ============ */
-  --shadow-xs: 0 0 0 1px rgba(0, 0, 0, 0.03);
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
-  --shadow-xl: 0 8px 24px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+  /* ============ 阴影 ============ */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.03);
+  --shadow-xl: 0 12px 36px rgba(0, 0, 0, 0.07), 0 4px 12px rgba(0, 0, 0, 0.04);
+  --shadow-focus: 0 0 0 3px rgba(79, 70, 229, 0.15);
 
   /* ============ 字体 ============ */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI',
     'PingFang SC', 'Microsoft YaHei', sans-serif;
   --font-mono: 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Menlo, Consolas, monospace;
 
-  /* ============ 布局尺寸 ============ */
-  --header-h: 64px;
+  /* ============ 字号 ============ */
+  --fs-xs: 0.6875rem;
+  --fs-sm: 0.8125rem;
+  --fs-base: 0.9375rem;
+  --fs-lg: 1.0625rem;
+  --fs-xl: 1.25rem;
+  --fs-2xl: 1.5rem;
+
+  /* ============ 布局 ============ */
+  --header-h: 56px;
   --sidebar-w: 280px;
-  --card-gap: 20px;
+  --card-gap: 16px;
   --main-max: 1400px;
   --manager-max: 1100px;
 
-  /* ============ 卡片顶部彩条渐变（参考图三色：蓝/黄/粉） ============ */
-  --gradient-blue: linear-gradient(135deg, #3b82f6 0%, #60a5fa 50%, #93c5fd 100%);
-  --gradient-yellow: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #fcd34d 100%);
-  --gradient-pink: linear-gradient(135deg, #ec4899 0%, #f472b6 50%, #f9a8d4 100%);
-  --gradient-green: linear-gradient(135deg, #10b981 0%, #34d399 50%, #6ee7b7 100%);
-  --gradient-purple: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 50%, #c4b5fd 100%);
-  --gradient-orange: linear-gradient(135deg, #f97316 0%, #fb923c 50%, #fdba74 100%);
+  /* ============ 卡片顶部彩条渐变 ============ */
+  --gradient-blue: linear-gradient(135deg, #6366f1, #818cf8, #a5b4fc);
+  --gradient-yellow: linear-gradient(135deg, #f59e0b, #fbbf24, #fcd34d);
+  --gradient-pink: linear-gradient(135deg, #ec4899, #f472b6, #f9a8d4);
+  --gradient-green: linear-gradient(135deg, #10b981, #34d399, #6ee7b7);
+  --gradient-purple: linear-gradient(135deg, #8b5cf6, #a78bfa, #c4b5fd);
+  --gradient-orange: linear-gradient(135deg, #f97316, #fb923c, #fdba74);
 
-  /* ============ Icon 容器配色（参考图圆形软背景） ============ */
-  --icon-blue-bg: #dbeafe;
-  --icon-blue-fg: #2563eb;
+  /* ============ Icon 容器配色 ============ */
+  --icon-blue-bg: #e0e7ff;
+  --icon-blue-fg: #4f46e5;
   --icon-yellow-bg: #fef3c7;
   --icon-yellow-fg: #b45309;
   --icon-pink-bg: #fce7f3;
@@ -86,4 +107,9 @@
   --icon-purple-fg: #6d28d9;
   --icon-orange-bg: #ffedd5;
   --icon-orange-fg: #c2410c;
+
+  /* ============ 动画关键帧 ============ */
+  --anim-fade-in: fadeIn 0.3s ease both;
+  --anim-slide-up: slideUp 0.3s ease both;
+  --anim-scale-in: scaleIn 0.25s var(--t-spring) both;
 }

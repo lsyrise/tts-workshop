@@ -160,7 +160,7 @@ export function InputArea() {
           onClick={handleImport}
           disabled={isGenerating || !text.trim()}
         >
-          导入到任务列表
+          导入任务
         </Button>
       </div>
     </GroupCard>

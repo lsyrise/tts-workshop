@@ -1,14 +1,14 @@
 .pill {
-  height: 30px;
+  height: 28px;
   padding: 0 12px;
-  border-radius: var(--r-full);
-  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  border: 0.5px solid var(--border);
   background: var(--surface);
   font-size: 12px;
   cursor: pointer;
   color: var(--text-secondary);
   font-weight: 500;
-  transition: all var(--t);
+  transition: all var(--t-fast);
   font-family: inherit;
   display: inline-flex;
   align-items: center;
@@ -18,14 +18,16 @@
 .pill:hover {
   border-color: var(--accent);
   color: var(--accent);
+  background: var(--accent-soft);
 }
 .active {
-  background: var(--accent);
-  color: var(--accent-fg);
+  background: var(--accent-soft);
+  color: var(--accent);
   border-color: var(--accent);
+  font-weight: 600;
 }
 .active:hover {
-  background: var(--accent-hover);
-  color: var(--accent-fg);
+  background: var(--accent-soft);
+  color: var(--accent-hover);
   border-color: var(--accent-hover);
 }

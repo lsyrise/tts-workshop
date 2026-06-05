@@ -4,8 +4,8 @@
   gap: 4px;
   font-size: 11px;
   font-weight: 500;
-  padding: 3px 9px;
-  border-radius: var(--r-full);
+  padding: 2px 8px;
+  border-radius: var(--r-xs);
   white-space: nowrap;
 }
 
@@ -14,8 +14,8 @@
   background: var(--surface-active);
 }
 .processing {
-  color: var(--brand);
-  background: var(--brand-soft);
+  color: var(--accent);
+  background: var(--accent-soft);
 }
 .done {
   color: var(--success);
@@ -31,7 +31,7 @@
 }
 
 .spin {
-  animation: spin 1s linear infinite;
+  animation: spin 0.8s linear infinite;
 }
 
 @keyframes spin {

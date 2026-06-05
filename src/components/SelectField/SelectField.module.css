@@ -4,7 +4,7 @@
   gap: 4px;
 }
 .label {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   color: var(--text-secondary);
   display: flex;
@@ -13,24 +13,27 @@
 }
 .select {
   width: 100%;
-  height: 38px;
+  height: 36px;
   padding: 0 12px;
-  border: 1px solid var(--border);
-  border-radius: var(--r-md);
-  font-size: 14px;
+  border: 0.5px solid var(--border);
+  border-radius: var(--r-sm);
+  font-size: 13px;
   font-family: inherit;
   outline: none;
   background: var(--surface);
   color: var(--text);
-  transition: border-color var(--t), box-shadow var(--t);
+  transition: border-color var(--t-fast), box-shadow var(--t-fast);
   cursor: pointer;
   appearance: none;
-  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23525252' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 12px center;
-  padding-right: 34px;
+  background-position: right 10px center;
+  padding-right: 32px;
+}
+.select:hover {
+  border-color: var(--border-strong);
 }
 .select:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-focus);
 }

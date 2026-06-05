@@ -4,24 +4,27 @@
   gap: 16px;
   height: var(--header-h);
   padding: 0 24px;
-  background: var(--surface);
-  border-bottom: 1px solid var(--border-light);
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 0.5px solid var(--border);
   flex-shrink: 0;
+  z-index: 100;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   text-decoration: none;
   color: var(--text);
 }
 
 .logo {
-  width: 36px;
-  height: 36px;
-  border-radius: var(--r-md);
-  background: var(--accent);
+  width: 32px;
+  height: 32px;
+  border-radius: var(--r-sm);
+  background: linear-gradient(135deg, var(--accent), #7c3aed);
   color: #fff;
   display: flex;
   align-items: center;
@@ -29,19 +32,20 @@
 }
 
 .brandText {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   margin: 0;
   letter-spacing: -0.01em;
 }
 
 .tag {
-  font-size: 11px;
-  font-weight: 500;
-  color: var(--text-muted);
-  background: var(--surface-active);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-soft);
   padding: 2px 7px;
-  border-radius: var(--r-sm);
+  border-radius: var(--r-xs);
+  letter-spacing: 0.02em;
 }
 
 .center {
@@ -53,7 +57,7 @@
 .right {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
 }
 
 .keyIndicator {
@@ -71,19 +75,19 @@
 }
 .keySet {
   color: var(--success);
-  background: var(--success-bg);
-  border-color: var(--success-soft);
+  background: var(--success-soft);
+  border-color: #a7f3d0;
 }
 
 .navBtn {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   font-size: 13px;
   font-weight: 500;
   color: var(--text-secondary);
   text-decoration: none;
-  padding: 6px 12px;
+  padding: 6px 14px;
   border-radius: var(--r-md);
   transition: all var(--t);
 }
@@ -92,10 +96,11 @@
   color: var(--text);
 }
 .navBtnActive {
-  background: var(--accent);
-  color: #fff;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 600;
 }
 .navBtnActive:hover {
-  background: var(--accent-hover);
-  color: #fff;
+  background: var(--accent-soft);
+  color: var(--accent-hover);
 }

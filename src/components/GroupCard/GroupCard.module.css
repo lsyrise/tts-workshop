@@ -2,26 +2,26 @@
   position: relative;
   background: var(--surface);
   border-radius: var(--r-lg);
-  box-shadow: var(--shadow-lg);
-  overflow: hidden;
+  border: 0.5px solid var(--border);
+  box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
   transition: box-shadow var(--t), transform var(--t);
 }
 .card:hover {
-  box-shadow: var(--shadow-xl);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
 }
 
 .stripe {
-  height: 4px;
-  flex-shrink: 0;
+  display: none;
 }
 
 .body {
-  padding: 24px 24px 22px;
+  padding: 20px 20px 18px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 14px;
   flex: 1;
   min-height: 0;
 }
@@ -29,13 +29,13 @@
 .head {
   display: flex;
   align-items: flex-start;
-  gap: 14px;
+  gap: 12px;
 }
 
 .iconWrap {
-  width: 48px;
-  height: 48px;
-  border-radius: var(--r-full);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--r-sm);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,7 +48,7 @@
 }
 
 .title {
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--text);
   margin: 0;
@@ -60,17 +60,17 @@
 
 .badge {
   font-weight: 500;
-  font-size: 12px;
+  font-size: 11px;
   color: var(--text-muted);
   background: var(--surface-active);
-  padding: 2px 10px;
+  padding: 2px 9px;
   border-radius: var(--r-full);
 }
 
 .desc {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-muted);
-  margin: 4px 0 0;
+  margin: 3px 0 0;
   line-height: 1.5;
 }
 
@@ -78,7 +78,7 @@
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .content {

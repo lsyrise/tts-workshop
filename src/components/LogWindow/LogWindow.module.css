@@ -1,24 +1,24 @@
 .win {
-  background: #18181b;
+  background: #111827;
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 12px;
   border-radius: var(--r-md);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
 }
 .header {
-  padding: 10px 14px;
+  padding: 8px 14px;
   display: flex;
   align-items: center;
   gap: 6px;
-  color: #a1a1aa;
+  color: #6b7280;
   font-weight: 500;
-  font-size: 12px;
-  border-bottom: 1px solid #27272a;
+  font-size: 11px;
+  border-bottom: 1px solid #1f2937;
 }
 .dot {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   display: inline-block;
 }
@@ -35,11 +35,11 @@
   margin-left: auto;
   font-weight: 400;
   font-size: 10px;
-  color: #71717a;
+  color: #4b5563;
 }
 .body {
-  padding: 6px 0;
-  max-height: 200px;
+  padding: 4px 0;
+  max-height: 180px;
   overflow-y: auto;
 }
 .line {
@@ -52,20 +52,20 @@
   line-height: 1.5;
 }
 .line:hover {
-  background: #27272a;
+  background: #1f2937;
 }
 .time {
-  color: #52525b;
+  color: #4b5563;
   flex-shrink: 0;
 }
 .msg {
-  color: #d4d4d8;
+  color: #d1d5db;
   flex: 1;
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.info { color: #d4d4d8; }
+.info { color: #d1d5db; }
 .warn { color: #fbbf24; }
 .error { color: #f87171; }
 .success { color: #34d399; }
