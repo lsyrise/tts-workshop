@@ -132,7 +132,7 @@ export function InputArea() {
           />
           <Button
             size="xs"
-            variant="ghost"
+            variant="outlined"
             onClick={() => fileRef.current?.click()}
             disabled={isGenerating}
           >
@@ -140,7 +140,7 @@ export function InputArea() {
           </Button>
           <Button
             size="xs"
-            variant="ghost"
+            variant="outlined"
             onClick={handleClear}
             disabled={isGenerating || (!text && useGenerationStore.getState().entries.length === 0)}
           >

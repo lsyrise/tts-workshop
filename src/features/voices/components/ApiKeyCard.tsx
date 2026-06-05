@@ -48,7 +48,7 @@ export function ApiKeyCard() {
         <Button size="sm" variant="primary" onClick={() => save(input)}>
           <Save size={12} /> 保存
         </Button>
-        <Button size="sm" variant="ghost" onClick={clear}>
+        <Button size="sm" variant="outlined" onClick={clear}>
           <Trash2 size={12} /> 清除
         </Button>
       </div>

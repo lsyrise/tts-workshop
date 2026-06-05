@@ -29,7 +29,7 @@ export function CustomVoiceList() {
           </div>
           <Button
             size="xs"
-            variant="ghost-danger"
+            variant="outlined-danger"
             onClick={() => removeCustom(langCode, v.voice_id)}
             title="删除"
           >

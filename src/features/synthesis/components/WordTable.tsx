@@ -80,17 +80,17 @@ export function WordTable() {
                 </td>
                 <td className={styles.colAction}>
                   {e.blob && (
-                    <Button size="xs" variant="ghost" onClick={() => handlePreview(idx)} title="试听">
+                    <Button size="xs" variant="outlined" onClick={() => handlePreview(idx)} title="试听">
                       <Play size={12} />
                     </Button>
                   )}
                   {e.status === 'error' && !isGenerating && (
-                    <Button size="xs" variant="ghost" onClick={() => handleRemove(idx)} title="重置">
+                    <Button size="xs" variant="outlined" onClick={() => handleRemove(idx)} title="重置">
                       <RefreshCw size={12} />
                     </Button>
                   )}
                   {!isGenerating && (
-                    <Button size="xs" variant="ghost-danger" onClick={() => handleRemove(idx)} title="清除">
+                    <Button size="xs" variant="outlined-danger" onClick={() => handleRemove(idx)} title="清除">
                       <Trash2 size={12} />
                     </Button>
                   )}

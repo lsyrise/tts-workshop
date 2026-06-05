@@ -102,6 +102,29 @@
   color: var(--danger);
 }
 
+/* --- outlined: 透明底+可见边框，hover 时背景上色 --- */
+.vOutlined {
+  background: transparent;
+  color: var(--text-secondary);
+  border-color: var(--border);
+}
+.vOutlined:not(:disabled):hover {
+  background: var(--surface-active);
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+
+.vOutlinedDanger {
+  background: transparent;
+  color: var(--text-muted);
+  border-color: var(--border);
+}
+.vOutlinedDanger:not(:disabled):hover {
+  background: var(--danger-soft);
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
 .block {
   width: 100%;
 }

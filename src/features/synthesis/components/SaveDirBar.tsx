@@ -1,4 +1,4 @@
-import { FolderOpen, X, FolderTree } from 'lucide-react';
+import { FolderOpen, X, FolderTree, Repeat } from 'lucide-react';
 import { GroupCard } from '@/components/GroupCard/GroupCard';
 import { Button } from '@/components/Button/Button';
 import { useFsApi } from '../hooks/useFsApi';
@@ -34,10 +34,10 @@ export function SaveDirBar() {
             <span className={styles.dirName}>{dirHandle.name}</span>
           </div>
           <div className={styles.actions}>
-            <Button size="sm" variant="ghost" onClick={select}>
-              更换
+            <Button size="sm" variant="outlined" onClick={select}>
+              <Repeat size={12} /> 更换
             </Button>
-            <Button size="sm" variant="ghost" onClick={clear}>
+            <Button size="sm" variant="outlined" onClick={clear}>
               <X size={12} /> 取消
             </Button>
           </div>

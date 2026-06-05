@@ -109,7 +109,7 @@ export function BottomBar() {
           </Button>
         )}
         {doneEntries.length > 0 && !isGenerating && (
-          <Button variant="ghost" onClick={handleZip}>
+          <Button variant="outlined" onClick={handleZip}>
             <Archive size={13} /> ZIP
           </Button>
         )}

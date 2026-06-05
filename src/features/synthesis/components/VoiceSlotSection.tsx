@@ -122,7 +122,7 @@ export function VoiceSlotSection() {
       </div>
       <Button
         size="sm"
-        variant="ghost"
+        variant="outlined"
         onClick={handleAddSlot}
         disabled={isDisabled || slots.length >= MAX_VOICE_SLOTS}
         block
