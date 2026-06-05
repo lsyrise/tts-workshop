@@ -102,22 +102,22 @@
   color: var(--danger);
 }
 
-/* --- outlined: 透明底+可见边框，hover 时背景上色 --- */
+/* --- outlined: 透明底+彩色边框，hover 时背景上色 --- */
 .vOutlined {
   background: transparent;
   color: var(--text-secondary);
-  border-color: var(--border);
+  border-color: var(--brand);
 }
 .vOutlined:not(:disabled):hover {
-  background: var(--surface-active);
-  color: var(--text);
-  border-color: var(--border-strong);
+  background: var(--brand-soft);
+  color: var(--brand);
+  border-color: var(--brand-hover);
 }
 
 .vOutlinedDanger {
   background: transparent;
   color: var(--text-muted);
-  border-color: var(--border);
+  border-color: var(--danger);
 }
 .vOutlinedDanger:not(:disabled):hover {
   background: var(--danger-soft);
