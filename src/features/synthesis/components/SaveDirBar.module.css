@@ -1,0 +1,41 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.dirInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+  padding: 10px 14px;
+  background: var(--surface-active);
+  border-radius: var(--r-md);
+  font-size: 13px;
+  color: var(--text);
+}
+
+.dirName {
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tip {
+  font-size: 13px;
+  color: var(--text-muted);
+  flex: 1;
+  padding: 10px 14px;
+  background: var(--surface-active);
+  border-radius: var(--r-md);
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}

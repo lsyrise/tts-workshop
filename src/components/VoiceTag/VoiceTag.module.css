@@ -1,0 +1,18 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--r-sm);
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.c1 { background: linear-gradient(135deg, #3b82f6, #60a5fa); }
+.c2 { background: linear-gradient(135deg, #8b5cf6, #a78bfa); }
+.c3 { background: linear-gradient(135deg, #ec4899, #f472b6); }
+.c4 { background: linear-gradient(135deg, #f59e0b, #fbbf24); }
+.c5 { background: linear-gradient(135deg, #10b981, #34d399); }

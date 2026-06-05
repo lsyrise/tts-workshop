@@ -1,0 +1,26 @@
+# 依赖
+node_modules/
+
+# 构建产物
+dist/
+
+# 环境变量（绝对不能提交）
+.env
+.env.local
+.env.*.local
+
+# 运行时临时文件
+.server.pid
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# 日志
+*.log
+
+# WorkBuddy 项目数据（非代码）
+.workbuddy/

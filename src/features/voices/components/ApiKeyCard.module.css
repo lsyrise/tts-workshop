@@ -1,0 +1,83 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.statusRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: var(--surface-active);
+  border-radius: var(--r-md);
+  font-size: 13px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--r-full);
+  background: var(--text-muted);
+  flex-shrink: 0;
+}
+.dot[data-on='true'] {
+  background: var(--success);
+  box-shadow: 0 0 0 3px var(--success-soft);
+}
+
+.statusText {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.preview {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--surface);
+  overflow: hidden;
+  transition: border-color var(--t), box-shadow var(--t);
+}
+.inputRow:focus-within {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px var(--brand-soft);
+}
+
+.input {
+  flex: 1;
+  border: 0;
+  padding: 11px 14px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  outline: none;
+  background: transparent;
+  color: var(--text);
+}
+
+.toggle {
+  border: 0;
+  background: transparent;
+  padding: 0 12px;
+  cursor: pointer;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.toggle:hover {
+  color: var(--text);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
