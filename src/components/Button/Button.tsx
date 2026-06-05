@@ -5,6 +5,17 @@ import styles from './Button.module.css';
 export type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'danger' | 'success' | 'ghost-danger' | 'outlined' | 'outlined-danger';
 export type ButtonSize = 'sm' | 'md' | 'xs';
 
+const VARIANT_CLASS: Record<ButtonVariant, string> = {
+  primary: 'vPrimary',
+  secondary: 'vSecondary',
+  ghost: 'vGhost',
+  danger: 'vDanger',
+  success: 'vSuccess',
+  'ghost-danger': 'vGhostDanger',
+  outlined: 'vOutlined',
+  'outlined-danger': 'vOutlinedDanger',
+};
+
 type ButtonProps = {
   variant?: ButtonVariant;
   size?: ButtonSize;
@@ -25,7 +36,7 @@ export function Button({
     <button
       className={clsx(
         styles.btn,
-        styles[`v-${variant}`],
+        styles[VARIANT_CLASS[variant]],
         size === 'sm' && styles.szSm,
         size === 'xs' && styles.szXs,
         block && styles.block,
